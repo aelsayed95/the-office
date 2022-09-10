@@ -6,9 +6,7 @@
 Welcome to The Office's documentation!
 ======================================
 
-
 Explore `The Office` documentation by browsing through the different modules below:
-
 
 .. toctree::
    :maxdepth: 2
