@@ -19,8 +19,9 @@ author = 'Aya Elsayed'
 
 extensions = [
     "sphinx.ext.autodoc",
+    "sphinx.ext.githubpages",
     "sphinx.ext.napoleon",
-    "sphinx.ext.githubpages"
+    "sphinx_multiversion",
 ]
 
 templates_path = ['_templates']
@@ -33,3 +34,9 @@ exclude_patterns = ['_build', 'Thumbs.db', '.DS_Store']
 
 html_theme = 'furo'
 html_static_path = ['_static']
+html_sidebars = {
+    '**': [
+        'sidebar/versions.html',
+    ],
+}
+
