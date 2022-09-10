@@ -11,6 +11,9 @@ Welcome to The Office's documentation!
    :caption: Contents:
 
 
+   modules
+
+
 Workspace
 ---------
 .. image:: _static/workspace.jpg
