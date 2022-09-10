@@ -15,7 +15,7 @@ jobs:
           python-version: "3.10"
       - name: Install dependencies
         run: |
-          pip install sphinx furo
+          pip install sphinx furo sphinx_multiversion
       - uses: actions/checkout@v3
         with:
           fetch-depth: 0
@@ -27,7 +27,7 @@ jobs:
         run: |
           git worktree add docs/_build/html gh-pages
           cd docs
-          make html
+          sphinx-multiversion . ./_build/html
       - name: Deploy docs
         run: |
           cd docs/_build/html
