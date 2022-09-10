@@ -1,0 +1,36 @@
+name: Deploy Documentation
+
+on:
+  pull_request:
+    types:
+      - closed
+
+jobs:
+  deploy_docs:
+    if: github.event.pull_request.merged == true
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/setup-python@v3
+        with:
+          python-version: "3.10"
+      - name: Install dependencies
+        run: |
+          pip install sphinx furo
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      - name: Git config
+        run: |
+          git config user.email "ayah.ehab11@gmail.com"
+          git config user.name "Aya Elsayed"
+      - name: Sphinx build
+        run: |
+          git worktree add docs/_build/html gh-pages
+          cd docs
+          make html
+      - name: Deploy docs
+        run: |
+          cd docs/_build/html
+          git add --all
+          git commit -m "deploy documentation updates"
+          git push origin gh-pages
