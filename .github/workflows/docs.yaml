@@ -24,7 +24,7 @@ jobs:
           git config user.email "ayah.ehab11@gmail.com"
           git config user.name "Aya Elsayed"
       - name: Create new tag
-        if: contains(github.event.pull_request.labels.*.name, 'docs-version++')
+        if: contains(github.event.pull_request.labels.*.name, 'version++')
         run: |
           ./create_tag.sh
       - name: Sphinx build
