@@ -11,6 +11,10 @@ Welcome to The Office's documentation!
    :caption: Contents:
 
 
+Workspace
+---------
+.. image:: _static/workspace.jpg
+
 
 Indices and tables
 ==================
