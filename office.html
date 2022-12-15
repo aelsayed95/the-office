@@ -3,10 +3,10 @@
   <head><meta charset="utf-8"/>
     <meta name="viewport" content="width=device-width,initial-scale=1"/>
     <meta name="color-scheme" content="light dark"><meta name="generator" content="Docutils 0.19: https://docutils.sourceforge.io/" />
-<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="next" title="the-office" href="modules.html" />
+<link rel="index" title="Index" href="genindex.html" /><link rel="search" title="Search" href="search.html" /><link rel="prev" title="employee module" href="employee.html" />
 
     <!-- Generated with Sphinx 5.3.0 and Furo 2022.12.07 -->
-        <title>The Office documentation</title>
+        <title>office module - The Office documentation</title>
       <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo.css?digest=91d0f0d1c444bdcb17a68e833c7a53903343c195" />
     <link rel="stylesheet" type="text/css" href="_static/styles/furo-extensions.css?digest=30d1aed668e5c3a91c3e3bf6a60b675221979f0e" />
@@ -123,7 +123,7 @@
       </label>
     </div>
     <div class="header-center">
-      <a href="#"><div class="brand">The Office  documentation</div></a>
+      <a href="index.html"><div class="brand">The Office  documentation</div></a>
     </div>
     <div class="header-right">
       <div class="theme-toggle-container theme-toggle-header">
@@ -143,7 +143,7 @@
   <aside class="sidebar-drawer">
     <div class="sidebar-container">
       
-      <div class="sidebar-sticky"><a class="sidebar-brand" href="#">
+      <div class="sidebar-sticky"><a class="sidebar-brand" href="index.html">
   
   
   <span class="sidebar-brand-text">The Office  documentation</span>
@@ -155,10 +155,10 @@
 </form>
 <div id="searchbox"></div><div class="sidebar-scroll"><div class="sidebar-tree">
   <p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1 has-children"><a class="reference internal" href="modules.html">the-office</a><input class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul>
+<ul class="current">
+<li class="toctree-l1 current has-children"><a class="reference internal" href="modules.html">the-office</a><input checked="" class="toctree-checkbox" id="toctree-checkbox-1" name="toctree-checkbox-1" role="switch" type="checkbox"/><label for="toctree-checkbox-1"><div class="visually-hidden">Toggle child pages in navigation</div><i class="icon"><svg><use href="#svg-arrow-right"></use></svg></i></label><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="employee.html">employee module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="office.html">office module</a></li>
+<li class="toctree-l2 current current-page"><a class="current reference internal" href="#">office module</a></li>
 </ul>
 </li>
 </ul>
@@ -195,31 +195,53 @@
           </label>
         </div>
         <article role="main">
-          <section id="welcome-to-the-office-s-documentation">
-<h1>Welcome to The Office’s documentation!<a class="headerlink" href="#welcome-to-the-office-s-documentation" title="Permalink to this heading">#</a></h1>
-<p>Explore The Office documentation. This is an update :)</p>
-<div class="toctree-wrapper compound">
-<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">the-office</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="employee.html">employee module</a></li>
-<li class="toctree-l2"><a class="reference internal" href="office.html">office module</a></li>
+          <section id="module-office">
+<span id="office-module"></span><h1>office module<a class="headerlink" href="#module-office" title="Permalink to this heading">#</a></h1>
+<dl class="py class">
+<dt class="sig sig-object py" id="office.TheOffice">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">office.</span></span><span class="sig-name descname"><span class="pre">TheOffice</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">regional_manager</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">employees</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">Set</span><span class="p"><span class="pre">[</span></span><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><span class="pre">Employee</span></a><span class="p"><span class="pre">]</span></span></span></em>, <em class="sig-param"><span class="n"><span class="pre">location</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#office.TheOffice" title="Permalink to this definition">#</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>A class representing an office that holds information about its employees and their sales.
+It exposes methods make and view sales for each employee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>regional_manager</strong> (<em>str</em>) – The name of the employee.</p></li>
+<li><p><strong>employees</strong> (<em>Set</em><em>[</em><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><em>Employee</em></a><em>]</em>) – A set of employee objects.</p></li>
+<li><p><strong>location</strong> (<em>str</em>) – The name of the region the office is located.</p></li>
 </ul>
-</li>
-</ul>
-</div>
-<section id="workspace">
-<h2>Workspace<a class="headerlink" href="#workspace" title="Permalink to this heading">#</a></h2>
-<img alt="_images/workspace.jpg" src="_images/workspace.jpg" />
-</section>
-</section>
-<section id="indices-and-tables">
-<h1>Indices and tables<a class="headerlink" href="#indices-and-tables" title="Permalink to this heading">#</a></h1>
-<ul class="simple">
-<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
-<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
-<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
-</ul>
+</dd>
+</dl>
+<dl class="py method">
+<dt class="sig sig-object py" id="office.TheOffice.get_employee_sales">
+<span class="sig-name descname"><span class="pre">get_employee_sales</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">employee</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><span class="pre">Employee</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">int</span></span></span><a class="headerlink" href="#office.TheOffice.get_employee_sales" title="Permalink to this definition">#</a></dt>
+<dd><p>Method that returns the number of sales given an employee.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>employee</strong> (<a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><em>Employee</em></a>) – The employee whose sales number we are interested in.</p>
+</dd>
+<dt class="field-even">Returns<span class="colon">:</span></dt>
+<dd class="field-even"><p>The total number of sales the employee has made.</p>
+</dd>
+<dt class="field-odd">Return type<span class="colon">:</span></dt>
+<dd class="field-odd"><p>int</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="office.TheOffice.record_sale">
+<span class="sig-name descname"><span class="pre">record_sale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">employee</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><span class="pre">Employee</span></a></span></em><span class="sig-paren">)</span> <span class="sig-return"><span class="sig-return-icon">&#x2192;</span> <span class="sig-return-typehint"><span class="pre">None</span></span></span><a class="headerlink" href="#office.TheOffice.record_sale" title="Permalink to this definition">#</a></dt>
+<dd><p>Method that adds a sale to the employee key of the sales dict.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters<span class="colon">:</span></dt>
+<dd class="field-odd"><p><strong>employee</strong> (<a class="reference internal" href="employee.html#employee.Employee" title="employee.Employee"><em>Employee</em></a>) – The <cite>employee</cite> who has made the sale.</p>
+</dd>
+</dl>
+</dd></dl>
+
+</dd></dl>
+
 </section>
 
         </article>
@@ -227,16 +249,18 @@
       <footer>
         
         <div class="related-pages">
-          <a class="next-page" href="modules.html">
+          
+          <a class="prev-page" href="employee.html">
+              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
               <div class="page-info">
                 <div class="context">
-                  <span>Next</span>
+                  <span>Previous</span>
                 </div>
-                <div class="title">the-office</div>
+                
+                <div class="title">employee module</div>
+                
               </div>
-              <svg class="furo-related-icon"><use href="#svg-arrow-right"></use></svg>
             </a>
-          
         </div>
         <div class="bottom-of-page">
           <div class="left-details">
@@ -267,11 +291,14 @@
         <div class="toc-tree-container">
           <div class="toc-tree">
             <ul>
-<li><a class="reference internal" href="#">Welcome to The Office’s documentation!</a><ul>
-<li><a class="reference internal" href="#workspace">Workspace</a></li>
+<li><a class="reference internal" href="#">office module</a><ul>
+<li><a class="reference internal" href="#office.TheOffice"><code class="docutils literal notranslate"><span class="pre">TheOffice</span></code></a><ul>
+<li><a class="reference internal" href="#office.TheOffice.get_employee_sales"><code class="docutils literal notranslate"><span class="pre">TheOffice.get_employee_sales()</span></code></a></li>
+<li><a class="reference internal" href="#office.TheOffice.record_sale"><code class="docutils literal notranslate"><span class="pre">TheOffice.record_sale()</span></code></a></li>
 </ul>
 </li>
-<li><a class="reference internal" href="#indices-and-tables">Indices and tables</a></li>
+</ul>
+</li>
 </ul>
 
           </div>
