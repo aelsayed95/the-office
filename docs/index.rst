@@ -6,7 +6,7 @@
 Welcome to The Office's documentation!
 ======================================
 
-Explore The Office documentation.
+Explore The Office documentation. This is an update :)
 
 .. toctree::
    :maxdepth: 2
